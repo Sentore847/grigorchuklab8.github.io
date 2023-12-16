@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #183147;
+    font-size: 1.2em;
+}
+
+p {
+    color: #1f374d;
+}
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.cake_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.cakes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_item {
+    position: relative;
+   width: 50%;
+    background-color: #f6f7f8;
+    border: 1px solid #dce0e3;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    transition: .5s ease-out;
+}
+
+.card_item:hover {
+    box-shadow: 3px 3px 10px 3px #646464;;
+}
+
+.card_content {
+    display: flex;
+}
+
+.card_info {
+    width: 50%;
+    margin-left: 10px;
+}
+
+hr {
+    margin: 15px -15px;
+}
+
+img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+.nav {
+    width: 40%;
+    background-color: #f6f7f8;
+    border: 1px solid #dce0e3;
+    border-radius: 5px;
+}
+
+.nav_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.nav_action {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider {
+    height: 5px;
+    background: #ddd;
+    position: relative;
+}
+
+.slider .progress {
+    height: 5px;
+    left: 25%;
+    right: 25%;
+    position: absolute;
+    background: #183147;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    top: 0px;
+    height: 5px;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height:  17px;
+    width: 17px;
+    border-radius: 50%;
+    pointer-events: auto;
+    -webkit-appearance: none;
+    background: #183147;
+}
+
+.range_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.nav_action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.nav_btn {
+    background-color: #e3e6e9;
+    border: 1px solid #dce0e3;
+    border-radius: 5px;
+    padding: 10px;
+    width: 60%;
+    margin: 5px;
+}
+
+.nav_text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 30px;
+}
+
+#pie,
+#rulet,
+#cheesecake,
+#cakes,
+#cake,
+#clear {
+    display: none;
+}
+
+label {
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;   
+    -khtml-user-select: none;   
+    -moz-user-select: none;      
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+input[type="checkbox"]#pie:checked ~ #one,
+input[type="checkbox"]#rulet:checked ~ #two,
+input[type="checkbox"]#cheesecake:checked ~ #three,
+input[type="checkbox"]#cakes:checked ~ #four,
+input[type="checkbox"]#cake:checked ~ #five,
+input[type="checkbox"]#clear:checked ~ #six {
+    background-color: #c4c7ca;;
+} 
+
+
+/* RESPONSIVE */
+
+
+/* DESKTOP */
+@media (min-width: 1201px) and (max-width: 2560px) {
+    .card_item {
+        width: 30%;
+    }
+}
+
+/* TABLET */
+
+@media (min-width: 730px) and (max-width: 1200px)  {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .cakes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card_item {
+        width: 30%;
+    }
+
+    h2 {
+        font-size: 0.8em;
+    }
+    
+    p {
+        font-size: 0.8em;
+    }
+
+    .nav_title,
+    .slider,
+    .range_text {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+        background-color: transparent;
+        border: 0;
+    }
+
+    .nav_action {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .nav_btn {
+        width: 25%;
+    }
+}
+
+/* MOBILE */
+
+@media (min-width: 375px) and (max-width: 730px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card_item {
+        width: 100%;
+    }
+
+    .nav_title,
+    .slider,
+    .range_text {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+        background-color: transparent;
+        border: 0;
+    }
+
+    .nav_action {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .nav_btn {
+        width: 33.33333%;
+    }
+}
